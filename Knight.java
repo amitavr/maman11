@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Knight {
     public static void main() {
-        final int RIGHT_BORDER = 8, LEFT_BORDER=1,UP_BORDER=1,DOWN_BORDER=8;
+        final int RIGHT_BORDER = 8, LEFT_BORDER = 1, UP_BORDER = 1, DOWN_BORDER = 8;
         Scanner scan = new Scanner(System.in);
         System.out.println("This program reads two integers which " + "represent the knight's location on the chess board: ");
         System.out.println("Please enter the number of row");
@@ -49,8 +49,8 @@ public class Knight {
 
             //Move down
             {   // Move down and right
-                int destinationCol = col + 1;
                 int destinationRow = row + 2;
+                int destinationCol = col + 1;
                 if (destinationCol <= RIGHT_BORDER && destinationRow <= DOWN_BORDER) {
                     System.out.println(destinationRow + " " + destinationCol);
                 }
@@ -64,9 +64,9 @@ public class Knight {
 
             //Move Up
             {   // Move up and right
-                int destinationCol = col + 1;
                 int destinationRow = row - 2;
-                if (destinationCol <= RIGHT_BORDER && destinationRow >=UP_BORDER) {
+                int destinationCol = col + 1;
+                if (destinationCol <= RIGHT_BORDER && destinationRow >= UP_BORDER) {
                     System.out.println(destinationRow + " " + destinationCol);
                 }
 
@@ -77,7 +77,6 @@ public class Knight {
                 }
             }
         }
-
     }
 }
 
