@@ -5,12 +5,11 @@ public class Chess {
 
     public static void main() {
         final int RIGHT_BORDER = 8, LEFT_BORDER=1,UP_BORDER=1,DOWN_BORDER=8;
-        String c1 = "";
-        String c2 = "";
+        String name1 = "",name2 = ""; // restore player name as a string
         Scanner scan = new Scanner(System.in);
+
         System.out.println("Please enter the type" + " of the first chessman");
         char first = scan.next().charAt(0);
-
         System.out.println("Please enter the number of row");
         int row1 = scan.nextInt();
         System.out.println("Please enter the number of column");
@@ -24,24 +23,24 @@ public class Chess {
 
         switch (first) {
             case 'b':
-                c1 = "bishop";
+                name1 = "bishop";
                 break;
             case 'r':
-                c1 = "rook";
+                name1 = "rook";
                 break;
             case 'k':
-                c1 = "knight";
+                name1 = "knight";
                 break;
         }
         switch (second) {
             case 'b':
-                c2 = "bishop";
+                name2 = "bishop";
                 break;
             case 'r':
-                c2 = "rook";
+                name2 = "rook";
                 break;
             case 'k':
-                c2 = "knight";
+                name2 = "knight";
                 break;
         }
 
@@ -58,22 +57,22 @@ public class Chess {
 
         // If bishop check that other tool is diagonal to bishop
         else if ((first == 'b' || second == 'b') && (Math.abs(row1 - row2) == Math.abs(col1 - col2))) {
-            if (first == 'b') System.out.println(c1 + " threats " + c2);
-            else System.out.println(c2 + " threats " + c1);
+            if (first == 'b') System.out.println(name1 + " threats " + name2);
+            else System.out.println(name2 + " threats " + name1);
 
         }
 
         // If rook check that other tool is on same col or row to rook
         else if ((first == 'r' || second == 'r') && (row1 == row2 || col1 == col2)) {
-            if (first == 'r') System.out.println(c1 + " threats " + c2);
-            else System.out.println(c2 + " threats " + c1);
+            if (first == 'r') System.out.println(name1 + " threats " + name2);
+            else System.out.println(name2 + " threats " + name1);
         }
 
         // If knight threats other tool
         else if ((first == 'k' || second == 'k') && ((Math.abs(row1 - row2) == 2 && Math.abs(col1 - col2) == 1) ||
                 (Math.abs(row1 - row2) == 1 && Math.abs(col1 - col2) == 2))) {
-            if (first == 'k') System.out.println(c1 + " threats " + c2);
-            else System.out.println(c2 + " threats " + c1);
+            if (first == 'k') System.out.println(name1 + " threats " + name2);
+            else System.out.println(name2 + " threats " + name1);
 
         } else System.out.println("no threat");
     }
