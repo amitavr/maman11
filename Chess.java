@@ -1,6 +1,7 @@
 package com.company;
 import java.util.Scanner;
 
+// user need to give two chessmen and the program check if the give chessmen data is valid and check threat of each other
 public class Chess {
 
     public static void main() {
