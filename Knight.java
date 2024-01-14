@@ -1,7 +1,7 @@
 package com.company;
-
 import java.util.Scanner;
 
+// Class indicates Knight moves that the chessmen can move on chessboard
 public class Knight {
     public static void main() {
         final int RIGHT_BORDER = 8, LEFT_BORDER = 1, UP_BORDER = 1, DOWN_BORDER = 8;
